@@ -5,8 +5,8 @@ npm install e53e04ac/secret-storage-azure-keyvault-secrets
 ~~~~~
 
 ~~~~~ mjs
-import { SecretStorageAzureKeyvaultSecrets } from 'e53e04ac/secret-storage-azure-keyvault-secrets';
-import { SecretStorage } from 'e53e04ac/secret-storage-azure-keyvault-secrets';
+import { const SecretStorageAzureKeyvaultSecrets } from 'e53e04ac/secret-storage-azure-keyvault-secrets';
+import { const SecretStorage } from 'e53e04ac/secret-storage-azure-keyvault-secrets';
 ~~~~~
 
 ~~~~~ mermaid
@@ -30,54 +30,66 @@ graph RL;
   A ----> B_5;
   click B_0 "https://www.npmjs.org/package/@azure/identity/v/3.1.3";
   click B_1 "https://www.npmjs.org/package/@azure/keyvault-secrets/v/4.6.0";
-  click B_2 "https://github.com/e53e04ac/base/tree/2dc903faf7859d755dd52f7fde706be5170b9a6f";
-  click B_3 "https://github.com/e53e04ac/hold/tree/285d028e225a7e75747417c3ed6b1ca0d5f52f6a";
+  click B_2 "https://github.com/e53e04ac/base/tree/b45c2734e219419ebd59c99b026f593b813ba494";
+  click B_3 "https://github.com/e53e04ac/hold/tree/8fc3f6696d1c7ed6d184d90c5e33298cc9228991";
   click B_4 "https://www.npmjs.org/package/@types/node/v/18.13.0";
-  click B_5 "https://github.com/e53e04ac/secret-storage/tree/b17d4f1344b985e0bddc1fe78404fc98e31f295b";
+  click B_5 "https://github.com/e53e04ac/secret-storage/tree/5e690a8fd150c081a00d6383a61f52afe079abf8";
 ~~~~~
 
 ~~~~~ mermaid
-graph LR;
-  A(["index.mjs"])
+graph RL;
+  subgraph "e53e04ac/secret-storage-azure-keyvault-secrets";
+    E_0(["SecretStorageAzureKeyvaultSecrets"]);
+    E_1(["SecretStorage"]);
+  end;
+  M(["index.mjs"])
   subgraph "@azure/identity";
-    B_0_0(["DefaultAzureCredential"]);
+    I_0_0(["DefaultAzureCredential"]);
   end;
   subgraph "@azure/keyvault-secrets";
-    B_1_0(["SecretClient"]);
+    I_1_0(["SecretClient"]);
   end;
   subgraph "base";
-    B_2_0(["Base"]);
+    I_2_0(["Base"]);
   end;
   subgraph "hold";
-    B_3_0(["hold"]);
-    B_3_1(["unwrap"]);
+    I_3_0(["hold"]);
+    I_3_1(["unwrap"]);
   end;
-  B_0_0 ----> A;
-  B_1_0 ----> A;
-  B_2_0 ----> A;
-  B_3_0 ----> A;
-  B_3_1 ----> A;
+  M ----> I_0_0;
+  M ----> I_1_0;
+  M ----> I_2_0;
+  M ----> I_3_0;
+  M ----> I_3_1;
+  E_0 ----> M;
+  E_1 ----> M;
 ~~~~~
 
 ~~~~~ mermaid
-graph LR;
-  A(["index.d.ts"])
+graph RL;
+  subgraph "e53e04ac/secret-storage-azure-keyvault-secrets";
+    E_0(["const SecretStorageAzureKeyvaultSecrets"]);
+    E_1(["const SecretStorage"]);
+  end;
+  M(["index.d.ts"])
   subgraph "@azure/keyvault-secrets";
-    B_0_0(["SecretClient"]);
+    I_0_0(["SecretClient"]);
   end;
   subgraph "base";
-    B_1_0(["Base"]);
+    I_1_0(["Base"]);
   end;
   subgraph "hold";
-    B_2_0(["Get"]);
-    B_2_1(["ValueOrGet"]);
+    I_2_0(["Get"]);
+    I_2_1(["ValueOrGet"]);
   end;
   subgraph "secret-storage";
-    B_3_0(["SecretStorage"]);
+    I_3_0(["SecretStorage"]);
   end;
-  B_0_0 ----> A;
-  B_1_0 ----> A;
-  B_2_0 ----> A;
-  B_2_1 ----> A;
-  B_3_0 ----> A;
+  M ----> I_0_0;
+  M ----> I_1_0;
+  M ----> I_2_0;
+  M ----> I_2_1;
+  M ----> I_3_0;
+  E_0 ----> M;
+  E_1 ----> M;
 ~~~~~
