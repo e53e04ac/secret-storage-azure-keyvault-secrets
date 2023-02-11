@@ -80,7 +80,7 @@ const companion = ({
     }),
 });
 
-/** @type {import('.').SecretStorageAzureKeyvaultSecrets.Companion} */
+/** @type {import('.').SecretStorageAzureKeyvaultSecrets.ConstructorWithCompanion} */
 const constructorWithCompanion = Object.assign(constructor, companion);
 
 export { constructorWithCompanion as SecretStorageAzureKeyvaultSecrets };
