@@ -28,12 +28,12 @@ graph RL;
   A ----> B_3;
   A ----> B_4;
   A ----> B_5;
-  click B_0 "https://www.npmjs.org/package/@azure/identity/v/3.1.3";
-  click B_1 "https://www.npmjs.org/package/@azure/keyvault-secrets/v/4.6.0";
-  click B_2 "https://github.com/e53e04ac/base/tree/ddd2c718686c0629e497f4fa610d1979aac40c8a";
-  click B_3 "https://github.com/e53e04ac/hold/tree/49707680ccdf4c5673f64ff0bab30f408269b328";
-  click B_4 "https://www.npmjs.org/package/@types/node/v/18.14.0";
-  click B_5 "https://github.com/e53e04ac/secret-storage/tree/29c383e0320f2edc98dcb466e7a53f4d3e9c011e";
+  click B_0 "https://www.npmjs.com/package/@azure/identity/v/3.1.3";
+  click B_1 "https://www.npmjs.com/package/@azure/keyvault-secrets/v/4.6.0";
+  click B_2 "https://github.com/e53e04ac/base/tree/421cea548a7a50b26a6ada01d1d17b9a013b847c";
+  click B_3 "https://github.com/e53e04ac/hold/tree/3191dd4704f3e5f90d6c27f288ede7700f5fdb66";
+  click B_4 "https://www.npmjs.com/package/@types/node/v/18.14.0";
+  click B_5 "https://github.com/e53e04ac/secret-storage/tree/4717650292d8af638973c283b2c024b04c7fa4ee";
 ~~~~~
 
 ~~~~~ mermaid
