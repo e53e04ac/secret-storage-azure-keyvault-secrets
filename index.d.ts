@@ -6,7 +6,7 @@
 
 import { SecretClient } from '@azure/keyvault-secrets';
 
-import { Base } from 'base';
+import { EventEmitter } from 'event-emitter';
 import { Get } from 'hold';
 import { ValueOrGet } from 'hold';
 import { SecretStorage } from 'secret-storage';
@@ -23,12 +23,14 @@ export declare namespace SecretStorageAzureKeyvaultSecrets {
         };
     };
 
+    type EventSpecs = Record<never, never>;
+
     type _Self<T extends object> = {
         readonly options: Get<Options<T>>;
         readonly _options: Get<unknown>;
     };
 
-    type Self<T extends object> = Base & SecretStorage<T> & {
+    type Self<T extends object> = EventEmitter<EventSpecs> & SecretStorage<T> & {
         readonly _SecretStorage: Get<_Self<T>>;
         readonly _SecretStorageAzureKeyvaultSecrets: Get<_Self<T>>;
     };

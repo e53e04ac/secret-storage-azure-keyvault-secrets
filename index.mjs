@@ -7,7 +7,7 @@
 import { DefaultAzureCredential } from '@azure/identity';
 import { SecretClient } from '@azure/keyvault-secrets';
 
-import { Base } from 'base';
+import { EventEmitter } from 'event-emitter';
 import { hold } from 'hold';
 import { unwrap } from 'hold';
 
@@ -36,7 +36,7 @@ const constructor = ((options) => {
 
     /** @type {import('.').SecretStorageAzureKeyvaultSecrets.Self<T>} */
     const self = ({
-        ...Base({}),
+        ...EventEmitter({}),
         _SecretStorage: (() => {
             return _self;
         }),
