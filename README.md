@@ -11,16 +11,26 @@ import { SecretStorage } from 'e53e04ac/secret-storage-azure-keyvault-secrets';
 
 ~~~~~ mermaid
 graph RL;
-  A(["package.json"]);
+  A["package.json\npackage-lock.json"];
   subgraph "dependencies";
     B_0(["@azure/identity"]);
     B_1(["@azure/keyvault-secrets"]);
-    B_2(["e53e04ac/event-emitter"]);
-    B_3(["e53e04ac/hold"]);
+    B_2(["event-emitter"]);
+    B_3(["hold"]);
   end;
   subgraph "devDependencies";
     B_4(["@types/node"]);
-    B_5(["e53e04ac/secret-storage"]);
+    B_5(["secret-storage"]);
+  end;
+  subgraph "github";
+    C_2(["e53e04ac/event-emitter\n98fd492f5a6e31cd646d4b79e70035061165871f"]);
+    C_3(["e53e04ac/hold\n6845a848f97733b8cd8a34bfc03c3bf040818aa8"]);
+    C_5(["e53e04ac/secret-storage\n54c6604590a7de08da3214b75be3ddb467686f6f"]);
+  end;
+  subgraph "npmjs";
+    C_0(["@azure/identity\n3.1.3"]);
+    C_1(["@azure/keyvault-secrets\n4.6.0"]);
+    C_4(["@types/node\n18.14.1"]);
   end;
   A ----> B_0;
   A ----> B_1;
@@ -28,12 +38,18 @@ graph RL;
   A ----> B_3;
   A ----> B_4;
   A ----> B_5;
-  click B_0 "https://www.npmjs.com/package/@azure/identity/v/3.1.3";
-  click B_1 "https://www.npmjs.com/package/@azure/keyvault-secrets/v/4.6.0";
-  click B_2 "https://github.com/e53e04ac/event-emitter/tree/faf256d4d2350ffa0af1fed794236faa4f0740a1";
-  click B_3 "https://github.com/e53e04ac/hold/tree/443c2e801bbe20409c761994a91fa88fb6044602";
-  click B_4 "https://www.npmjs.com/package/@types/node/v/18.14.1";
-  click B_5 "https://github.com/e53e04ac/secret-storage/tree/58991f7edc1de6fc3efa29af776227c825db5ef0";
+  B_0 ----> C_0;
+  B_1 ----> C_1;
+  B_2 ----> C_2;
+  B_3 ----> C_3;
+  B_4 ----> C_4;
+  B_5 ----> C_5;
+  click C_0 "https://www.npmjs.com/package/@azure/identity/v/3.1.3";
+  click C_1 "https://www.npmjs.com/package/@azure/keyvault-secrets/v/4.6.0";
+  click C_2 "https://github.com/e53e04ac/event-emitter/tree/98fd492f5a6e31cd646d4b79e70035061165871f";
+  click C_3 "https://github.com/e53e04ac/hold/tree/6845a848f97733b8cd8a34bfc03c3bf040818aa8";
+  click C_4 "https://www.npmjs.com/package/@types/node/v/18.14.1";
+  click C_5 "https://github.com/e53e04ac/secret-storage/tree/54c6604590a7de08da3214b75be3ddb467686f6f";
 ~~~~~
 
 ~~~~~ mermaid
@@ -42,7 +58,7 @@ graph RL;
     E_0(["SecretStorageAzureKeyvaultSecrets"]);
     E_1(["SecretStorage"]);
   end;
-  M(["index.mjs"])
+  M["index.mjs"]
   subgraph "@azure/identity";
     I_0_0(["DefaultAzureCredential"]);
   end;
@@ -72,7 +88,7 @@ graph RL;
     E_1(["const SecretStorageAzureKeyvaultSecrets"]);
     E_2(["const SecretStorage"]);
   end;
-  M(["index.d.ts"])
+  M["index.d.ts"]
   subgraph "@azure/keyvault-secrets";
     I_0_0(["SecretClient"]);
   end;
