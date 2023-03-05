@@ -23,9 +23,9 @@ graph RL;
     B_5(["secret-storage"]);
   end;
   subgraph "github";
-    C_2(["e53e04ac/event-emitter\n63f34d0c90cbecf2b424b38c0615e67fd7ba6594"]);
-    C_3(["e53e04ac/hold\n050a2db413598fe87670b5b6bd34b804776a3657"]);
-    C_5(["e53e04ac/secret-storage\n6657952fcac09e0fd545a9f37f265a56894a42a4"]);
+    C_2(["e53e04ac/event-emitter\ndb90659b1c25a4e17e8a8dbf8920a630fd30321d"]);
+    C_3(["e53e04ac/hold\n472cfb85bada328cba9c6faddcf45b1241761027"]);
+    C_5(["e53e04ac/secret-storage\naaad15d7f41b0e36dc392af3f823de3098568449"]);
   end;
   subgraph "npmjs";
     C_0(["@azure/identity\n3.1.3"]);
@@ -46,10 +46,10 @@ graph RL;
   B_5 ----> C_5;
   click C_0 "https://www.npmjs.com/package/@azure/identity/v/3.1.3";
   click C_1 "https://www.npmjs.com/package/@azure/keyvault-secrets/v/4.6.0";
-  click C_2 "https://github.com/e53e04ac/event-emitter/tree/63f34d0c90cbecf2b424b38c0615e67fd7ba6594";
-  click C_3 "https://github.com/e53e04ac/hold/tree/050a2db413598fe87670b5b6bd34b804776a3657";
+  click C_2 "https://github.com/e53e04ac/event-emitter/tree/db90659b1c25a4e17e8a8dbf8920a630fd30321d";
+  click C_3 "https://github.com/e53e04ac/hold/tree/472cfb85bada328cba9c6faddcf45b1241761027";
   click C_4 "https://www.npmjs.com/package/@types/node/v/18.14.6";
-  click C_5 "https://github.com/e53e04ac/secret-storage/tree/6657952fcac09e0fd545a9f37f265a56894a42a4";
+  click C_5 "https://github.com/e53e04ac/secret-storage/tree/aaad15d7f41b0e36dc392af3f823de3098568449";
 ~~~~~
 
 ~~~~~ mermaid
